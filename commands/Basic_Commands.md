@@ -2,7 +2,11 @@
 **mv**
 ps: `move`, `Move-Item`
 
+**rm**
 
+ps: `Remove-Item`
+    * `-Recurse`
+    * `-Force`
 
 ps: `$HOME`
 > No ~
