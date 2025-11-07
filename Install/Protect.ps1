@@ -1,7 +1,3 @@
-Get-NetAdapter
-Get-DnsClientServerAddress -InterfaceAlias "<AdapterName>"
-Set-DnsClientServerAddress -InterfaceAlias "<AdapterName>" -ServerAddresses ("<DNS_IP>","1.1.1.1")
-
 # Enable the built-in Administrator account
 net user Administrator /active:yes
 

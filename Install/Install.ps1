@@ -7,7 +7,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 
 # Install choco
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>        
-choco install git intellijidea-community python -y
+choco install git intellijidea-community python openssh -y
 
 # Git: $HOME\.ssh
 

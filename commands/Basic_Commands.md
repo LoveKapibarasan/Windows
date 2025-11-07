@@ -8,8 +8,13 @@ ps: `Remove-Item`
     * `-Recurse`
     * `-Force`
 
-ps: `$HOME`
+
+**cd**
+* the same
+* care path notation
+* ps: `$HOME` = `~`
 > No ~
+
 
 ### Power
 ps: `Restart-Computer`
