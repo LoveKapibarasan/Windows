@@ -1,15 +1,14 @@
 # Run in admin terminal
 Remove-Item -Recurse -Force "C:\ProgramData\chocolatey"
 
-# Allow the installation script
+# Allow the installation script from internet
 Set-ExecutionPolicy Bypass -Scope Process -Force
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-
-
 choco search "$package"
 # Install choco
-PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>        
+
+PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
 choco install git git-lfs intellijidea-community pycharm-community python -y
 choco install openssh docker-desktop tex-live wireshark R.Studio -y
 git lfs install
@@ -29,16 +28,6 @@ git lfs install
 
 # HTMail
 # https://microsoftedge.microsoft.com/addons/detail/htmail-insert-html-into-/fmolpbepkmdanohdmaglpnldhebfjkkd
-# Switch to HTML mode
 
-# IntelliJ Plugin ID
-# 1. com.intellij.plugin.adernov.powershell
-
-# Uninstall Microsoft store, Paint, Solitaire, XBox, Onedrive, News
+# Uninstall Microsoft store
 Get-AppxPackage *Microsoft.WindowsStore* | Remove-AppxPackage
-Get-AppxPackage *Microsoft.MSPaint* | Remove-AppxPackage
-Get-AppxPackage *Microsoft.MicrosoftSolitaireCollection* | Remove-AppxPackage
-Get-AppxPackage *Microsoft.XboxApp* | Remove-AppxPackage
-Get-AppxPackage *Microsoft.XboxGamingOverlay* | Remove-AppxPackage
-Get-AppxPackage *Microsoft.Xbox.TCUI* | Remove-AppxPackage
-Get-AppxPackage *Microsoft.News* | Remove-AppxPackage

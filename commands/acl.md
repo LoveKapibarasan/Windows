@@ -1,16 +1,8 @@
 
-```bash
-# start SSH agent
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-# check
-ssh-add -l
+# ACL (Access Control List)
+```powershell
+icacls file
 ```
-
-
-
-**ACL**: Access Control List
-`icacls file`
     * `/grant`, `/grant:r`: replace
     * `/remove`
 

@@ -10,7 +10,7 @@
 3. On the top-right corner of the New Tab page, click the gear icon (⚙️) for Page settings.
 
 
-## 
+## Background
 1. `Right-click` on an empty area of the desktop.
     * Select Personalize.
     * This opens `Settings` → `Personalization` → `Background`.
@@ -22,4 +22,10 @@
 
 
 ## Uninstall
-1. Go to `Settings` → `Apps` → `Installed apps`
+* Go to `Settings` → `Apps` → `Installed apps`
+* Remove the app.
+  * News
+  * Weather
+  * Solitaire
+  * Paint
+  * XBox

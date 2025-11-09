@@ -1,7 +1,10 @@
 
 **mv**
-ps: `move`, `Move-Item`
-
+ps: `move`, 
+```powershell
+Move-Item -Path "$source" -Destination "$destination"
+## No -Recurse
+```
 **rm**
 
 ps: `Remove-Item`

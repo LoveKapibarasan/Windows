@@ -22,6 +22,12 @@ cd "$path_to"
 .\file.ps1
 ```
 
+**.bashrc**
+```powershell
+echo $PROFILE
+# C:\Users\<username>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
+
 
 ### Chmod
 
