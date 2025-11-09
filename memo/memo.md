@@ -36,3 +36,9 @@ IPhone 2, 9 also does not exist
 * securty chip
 * 2.0 is required for Windows11
 * CPU,2017 ~  is required.
+
+**Aplication Launcher**
+* `Win` + `R`
+
+**System Config**
+* Registry

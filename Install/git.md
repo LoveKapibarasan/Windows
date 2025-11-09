@@ -1,8 +1,12 @@
 
-
+```bash
 # start SSH agent
-Start-Service ssh-agent
-ssh-add .ssh\id_ed25519
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+# check
+ssh-add -l
+```
+
 
 
 **ACL**: Access Control List
@@ -22,5 +26,4 @@ icacls "C:\Users\lovek\.ssh
 " /grant "$(whoami):F"
 icacls "C:\Users\lovek\.ssh" /remove "Users"
 icacls "C:\Users\lovek\.ssh" /remove "Authenticated Users"
-`
 ```
