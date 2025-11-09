@@ -1,7 +1,9 @@
 # Windows Product key commands
-* [Ref 1](https://pc-jiten.com/post45269/)
 
-`slmgr.vbs [Options]`
+
+### See product key
+
+1. `slmgr.vbs [Options]`
 
 ```powershell
 slmgr /dli
@@ -11,12 +13,17 @@ slmgr /dlv
 powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
 ```
 
-[Show Product Key](https://apps.microsoft.com/detail/9pkvzcprx9nv?hl=en-GB&gl=DE)
+2. [Show Product Key Software](https://apps.microsoft.com/detail/9pkvzcprx9nv?hl=en-GB&gl=DE)
 
+
+### Windows Types
 
 1. Home
 2. Pro
 3. Education
+
+
+### Product Key Types
 
 1. OEM
     * DSP(Delivery Service Partner)
@@ -25,4 +32,4 @@ powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3x
         * in BIOS
 2. Volume Licence
     * Company
-3. Package
+3. Package, Retail version
