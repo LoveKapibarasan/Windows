@@ -18,6 +18,33 @@ ps: `Remove-Item`
 * ps: `$HOME` = `~`
 > No ~
 
+**echo**
+> Alias
+* ps: `Write-Output`
+* cmd: `echo`
+
+**cat**
+* ps: `Get-Content`
+* cmd: `type`
+
+**Write out**
+* ps: 
+  1. `Set-Content $file`
+  2. `Add-Content $file`: `>>` Append
+
+**|**
+* the same
+
+**replace**
+```ps1
+$str -replace "$old", "$new"
+```
+
+```powershell
+whoami
+where program # which
+```
+
 
 ### Power
 ps: `Restart-Computer`
@@ -39,5 +66,14 @@ Write-Output $message
 
 `C`: 
 
-### Path
-`\` style.
+### Escape
+
+`$` = `$
+
+### Env
+```ps1
+refreshenv
+# add environment variable permanently
+## !! Sometimes it does not work on powershell immediately 
+setx PATH "$env:PATH;C:\ProgramData\**\bin"
+```

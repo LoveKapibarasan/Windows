@@ -20,6 +20,8 @@ file.bat
 ```powershell
 cd "$path_to"
 .\file.ps1
+# Ignore script execution blocks
+powershell -ExecutionPolicy Bypass -File ".\name.ps1"
 ```
 
 **.bashrc**

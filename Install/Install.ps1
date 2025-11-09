@@ -10,7 +10,7 @@ choco search "$package"
 
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
 choco install git git-lfs intellijidea-community pycharm-community python -y
-choco install openssh docker-desktop tex-live wireshark R.Studio -y
+choco install openssh docker-desktop tex-live wireshark R.Studio rust dbevear -y
 git lfs install
 
 # Git: $HOME\.ssh
@@ -23,11 +23,14 @@ git lfs install
 # Pasonemu
 # https://pasonemu.com/
 
-# PerplexityAI Comet
-# https://www.perplexity.ai/
-
 # HTMail
 # https://microsoftedge.microsoft.com/addons/detail/htmail-insert-html-into-/fmolpbepkmdanohdmaglpnldhebfjkkd
 
+# Rust
+irm https://sh.rustup.rs | iex
+
+
+# =====
 # Uninstall Microsoft store
 Get-AppxPackage *Microsoft.WindowsStore* | Remove-AppxPackage
+
