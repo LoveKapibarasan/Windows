@@ -26,9 +26,8 @@ git lfs install
 # HTMail
 # https://microsoftedge.microsoft.com/addons/detail/htmail-insert-html-into-/fmolpbepkmdanohdmaglpnldhebfjkkd
 
-# Rust
-irm https://sh.rustup.rs | iex
-
+# Office
+# https://www.microsoft.com/en-us/microsoft-365/download-office
 
 # =====
 # Uninstall Microsoft store
