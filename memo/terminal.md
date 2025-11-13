@@ -24,6 +24,10 @@ cd "$path_to"
 powershell -ExecutionPolicy Bypass -File ".\name.ps1"
 ```
 
+**Copy and Paste**
+* select & `Ctrl` + `C`
+* `Ctrl` + `V`
+
 **.bashrc**
 ```powershell
 echo $PROFILE

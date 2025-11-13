@@ -11,6 +11,7 @@ choco search "$package"
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
 choco install git git-lfs intellijidea-community pycharm-community python -y
 choco install openssh docker-desktop tex-live wireshark R.Studio rust dbevear -y
+choco install forticlientvpn nvm nodejs -y
 git lfs install
 
 # Git: $HOME\.ssh
@@ -28,6 +29,11 @@ git lfs install
 
 # Office
 # https://www.microsoft.com/en-us/microsoft-365/download-office
+
+# Shogi dokoro
+# https://shogidokoro2.stars.ne.jp/
+icacls "C:\Program Files (x86)\Shogidokoro" /grant "Everyone:(F)" /T
+
 
 # =====
 # Uninstall Microsoft store
