@@ -19,26 +19,11 @@ runas /user: Administrator powershell
 whoami
 ```
 
-### Boot Config
-
+### sudo
+1. Run as Administrator
+2. 
 ```powershell
-# Boot Configuration Data edit 
-
-# default OS
-bcdedit /default {identifier}
-
-# Check boot entries
-bcdedit /enum
-
-# Timeout
-bcdedit /timeout 30
-
-# Safeboot
-bcdedit /set {current} safeboot minimal
-## minimal = default
-## network, alternateshell
-
-bcdedit /deletevalue {current} safeboot
+Start-Process powershell -Verb RunAs -ArgumentList "-File `".\script.ps1`""
 ```
 
 

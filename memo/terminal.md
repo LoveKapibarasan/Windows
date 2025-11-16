@@ -20,6 +20,10 @@ file.bat
 ```powershell
 cd "$path_to"
 .\file.ps1
+& file.ps1
+command1 `
+line1`
+line2 # line change
 # Ignore script execution blocks
 powershell -ExecutionPolicy Bypass -File ".\name.ps1"
 ```

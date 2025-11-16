@@ -11,15 +11,9 @@ choco search "$package"
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
 choco install git git-lfs intellijidea-community pycharm-community python -y
 choco install openssh docker-desktop tex-live wireshark R.Studio rust dbevear -y
-choco install forticlientvpn nvm nodejs -y
-git lfs install
-
-# Git: $HOME\.ssh
+choco install forticlientvpn nvm nodejs adguardhome -y
 
 # Install npcap https://npcap.com
-
-# Adguard https://adguard.com/en/adguard-windows/overview.html
-# AdGuard Extension: https://microsoftedge.microsoft.com/addons/detail/adguard-browser-assistant/calilkfbhgibagenlbchfbiafnacldki
 
 # Pasonemu
 # https://pasonemu.com/
@@ -33,7 +27,6 @@ git lfs install
 # Shogi dokoro
 # https://shogidokoro2.stars.ne.jp/
 icacls "C:\Program Files (x86)\Shogidokoro" /grant "Everyone:(F)" /T
-
 
 # =====
 # Uninstall Microsoft store

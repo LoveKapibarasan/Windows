@@ -4,6 +4,7 @@ ps: `move`,
 ```powershell
 Move-Item -Path "$source" -Destination "$destination"
 ## No -Recurse
+# -Force: Overwrite
 ```
 **rm**
 
@@ -35,20 +36,26 @@ ps: `Remove-Item`
 **|**
 * the same
 
+**&&**
+* `;`
+
 **replace**
 ```ps1
 $str -replace "$old", "$new"
 ```
+
+**w**
 
 ```powershell
 whoami
 where program # which
 ```
 
+**path**
+```powershell
+Resolve-Path $file_Path
+```
 
-### Power
-ps: `Restart-Computer`
-cmd: `shutdown /r /t 0`
 
 ### Variable Expansion
 ```powershell
@@ -65,6 +72,10 @@ Write-Output $message
 ### Disks
 
 `C`: 
+
+**path**
+1. `\`
+2. Does not care capital case
 
 ### Escape
 
