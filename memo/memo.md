@@ -30,6 +30,10 @@ IPhone 2, 9 also does not exist
     * `C:\ProgramData`: `/etc`, `/var`
     * `C:$Recycle.Bin`: `~/.local/share/Trash/files`
 
+```powershell
+# Open Device Manager
+ devmgmt.msc 
+```
 
 
 **TPM（Trusted Platform Module)**

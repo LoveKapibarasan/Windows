@@ -11,12 +11,9 @@ choco search "$package"
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
 choco install git git-lfs intellijidea-community pycharm-community python -y
 choco install openssh docker-desktop tex-live wireshark R.Studio rust dbevear -y
-choco install forticlientvpn nvm nodejs adguardhome -y
+choco install forticlientvpn nvm nodejs imagemagick ghostscript  -y
 
 # Install npcap https://npcap.com
-
-# Pasonemu
-# https://pasonemu.com/
 
 # HTMail
 # https://microsoftedge.microsoft.com/addons/detail/htmail-insert-html-into-/fmolpbepkmdanohdmaglpnldhebfjkkd

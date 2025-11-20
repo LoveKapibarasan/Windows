@@ -13,3 +13,4 @@ tlmgr install xcolor
 
 
 tlmgr install titlesec
+tlmgr install forest
