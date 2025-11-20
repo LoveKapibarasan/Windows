@@ -1,6 +1,4 @@
 # DNS Commands
-
-
 ```powershell
 nslookup domain
 Resolve-DnsName domain
@@ -45,3 +43,14 @@ Set-DnsClientServerAddress -InterfaceAlias "Wi-Fi" -ResetServerAddresses
 3. **Registry entries** (equivalent to /etc/resolv.conf):
    - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
    - Not typically manually edited
+
+
+### Disable DoH(DNS over HTTPS)
+```powershell
+# https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/dnsoverhttpsmode?utm_source=chatgpt.com
+# Edge
+reg add "HKLM\Software\Policies\Microsoft\Edge" /v DnsOverHttpsMode /t REG_SZ /d "off" /f
+
+Get-DnsClientDohServerAddress | Remove-DnsClientDohServerAddress
+Get-DNSClientDohServerAddress
+```
