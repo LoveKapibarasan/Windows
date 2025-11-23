@@ -11,11 +11,10 @@ icacls file
 
 ```powershell
 # remove inheritence
-icacls "C:\Users\lovek\.ssh" /inheritance:r
-icacls "C:\Users\lovek\.ssh" /remove "SYSTEM"
+icacls "$HOME\.ssh" /inheritance:r
+icacls "$HOME\.ssh" /remove "SYSTEM"
 # Full access
-icacls "C:\Users\lovek\.ssh
-" /grant "$(whoami):F"
-icacls "C:\Users\lovek\.ssh" /remove "Users"
-icacls "C:\Users\lovek\.ssh" /remove "Authenticated Users"
+icacls "$HOME\.ssh" /grant "$(whoami):F"
+icacls "$HOME\.ssh" /remove "Users"
+icacls "$HOME\.ssh" /remove "Authenticated Users"
 ```

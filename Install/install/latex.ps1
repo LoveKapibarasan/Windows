@@ -14,3 +14,6 @@ tlmgr install xcolor
 
 tlmgr install titlesec
 tlmgr install forest
+
+# Bibtex
+tlmgr install cite

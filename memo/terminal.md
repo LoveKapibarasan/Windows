@@ -37,6 +37,11 @@ powershell -ExecutionPolicy Bypass -File ".\name.ps1"
 echo $PROFILE
 # C:\Users\<username>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
+**Shortcut**
+
+* `Ctrl + →`
+* `Ctrl + A`
+* `Ctrl + E`
 
 
 ### Chmod

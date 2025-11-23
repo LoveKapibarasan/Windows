@@ -1,4 +1,11 @@
 
+# Alias
+```powershell
+Get-Alias $command
+```
+
+
+
 **mv**
 ps: `move`, 
 ```powershell
@@ -6,6 +13,19 @@ Move-Item -Path "$source" -Destination "$destination"
 ## No -Recurse
 # -Force: Overwrite
 ```
+
+**cp**
+```powershell
+Copy-Item -Path "$source" -Destination "$destination"
+# -Force : Overwrite True
+```
+
+**make a file**
+```powershell
+New-Item -Path $PATH_TO -ItemType File
+New-Item -Path $PATH_TO -ItemType Directory -Force
+```
+
 **rm**
 
 ps: `Remove-Item`
@@ -14,15 +34,29 @@ ps: `Remove-Item`
 
 
 **cd**
-* the same
 * care path notation
 * ps: `$HOME` = `~`
 > No ~
+```powershell
+Set-Location "$Path_to"
+```
+
+**read**
+```powershell
+$name = Read-Host -Prompt "Enter xxx"
+```
 
 **echo**
-> Alias
-* ps: `Write-Output`
-* cmd: `echo`
+```powershell
+Write-Host [[-Object] <Object>] [parameters]
+# -ForegroundColor Red
+# -BackgroundColor Yellow
+Write-Output # Pipeline, no color
+Write-Information # Pipeline, no color, $InformationPreference = 'Continue'
+Write-Debug # yellow, $DebugPreference = 'Continue'
+Write-Warning # yellow, $WarningPreference = 'Continue'
+Write-Error # red, $ErrorActionPreference = 'Continue'
+```
 
 **cat**
 * ps: `Get-Content`
@@ -44,6 +78,11 @@ ps: `Remove-Item`
 $str -replace "$old", "$new"
 ```
 
+**ls, dir**
+```powershell
+Get-ChildItem
+```
+
 **w**
 
 ```powershell
@@ -54,6 +93,11 @@ where program # which
 **path**
 ```powershell
 Resolve-Path $file_Path
+```
+
+**Vim**
+```powershell
+notepad $file
 ```
 
 
@@ -76,6 +120,9 @@ Write-Output $message
 **path**
 1. `\`
 2. Does not care capital case
+
+### Variable Expansion
+* The same as bash
 
 ### Escape
 

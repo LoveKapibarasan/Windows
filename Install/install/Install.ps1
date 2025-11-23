@@ -12,6 +12,7 @@ PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"     
 choco install git git-lfs intellijidea-community pycharm-community python -y
 choco install openssh docker-desktop tex-live wireshark R.Studio rust dbevear -y
 choco install forticlientvpn nvm nodejs imagemagick ghostscript  -y
+choco install kindle rufus -y
 
 # Install npcap https://npcap.com
 
@@ -28,4 +29,8 @@ icacls "C:\Program Files (x86)\Shogidokoro" /grant "Everyone:(F)" /T
 # =====
 # Uninstall Microsoft store
 Get-AppxPackage *Microsoft.WindowsStore* | Remove-AppxPackage
+
+
+# Rename hostname
+Rename-Computer -NewName "pc" -Restart
 

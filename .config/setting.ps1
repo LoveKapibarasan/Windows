@@ -6,7 +6,11 @@ if (!(Test-Path -Path $PROFILE)) {
 # Simbolic Link is only allowed for Admin
 # Dest file should exist !!
 New-Item -ItemType File -Path $PROFILE -Force
-New-Item -ItemType SymbolicLink -Path .\Microsoft_PowerShell_profile.ps1 -Target "$(Write-Output $PROFILE)"
+Copy-Item -Path .\Microsoft.PowerShell_profile.ps1 -Destination "$(Write-Output $PROFILE)" -Force
+# New-Item -ItemType SymbolicLink -Path "$(Write-Output $PROFILE)" -Target .\Microsoft.PowerShell_profile.ps1
+
+Get-Item $PROFILE | Select-Object FullName, LinkType, Target
+
 
 # Execution Policy
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
