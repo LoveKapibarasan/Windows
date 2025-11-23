@@ -7,6 +7,25 @@ if ($sshAgent.Status -ne 'Running') {
 # SSH鍵を自動追加（初回のみパスフレーズ入力）
 ssh-add "$env:USERPROFILE\.ssh\id_ed25519" 2>$null
 
+function Start-SSHAgent {
+    # Start the ssh-agent service
+    $agentStatus = Get-Service ssh-agent -ErrorAction SilentlyContinue
+
+    if ($agentStatus.Status -ne 'Running') {
+        Start-Service ssh-agent
+    }
+
+    # Define the key path
+    $keyPath = Join-Path $env:USERPROFILE ".ssh\id_ed25519"
+
+    # Check if key exists and add it
+    if (Test-Path $keyPath) {
+        ssh-add $keyPath
+    } else {
+        Write-Host "SSH key not found at: $keyPath" -ForegroundColor Red
+    }
+}
+
 function rand {
     param(
         [Parameter(Mandatory = $true)]
