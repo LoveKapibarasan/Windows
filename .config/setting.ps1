@@ -14,3 +14,6 @@ Get-Item $PROFILE | Select-Object FullName, LinkType, Target
 
 # Execution Policy
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+# 2.
+Copy-Item -Path .\.bashrc -Destination $HOME

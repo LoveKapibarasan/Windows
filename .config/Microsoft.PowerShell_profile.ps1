@@ -1,11 +1,4 @@
-# SSH Agent 自動起動
-$sshAgent = Get-Service ssh-agent -ErrorAction SilentlyContinue
-if ($sshAgent.Status -ne 'Running') {
-    Start-Service ssh-agent
-}
 
-# SSH鍵を自動追加（初回のみパスフレーズ入力）
-ssh-add "$env:USERPROFILE\.ssh\id_ed25519" 2>$null
 
 function Start-SSHAgent {
     # Start the ssh-agent service
