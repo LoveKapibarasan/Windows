@@ -9,8 +9,8 @@ choco search "$package"
 # Install choco
 
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
-choco install git git-lfs intellijidea-community pycharm-community python -y
-choco install openssh docker-desktop tex-live wireshark R.Studio rust dbevear -y
+choco install git git-lfs intellijidea-community pycharm-community python dbeaver wireguard -y
+choco install openssh docker-desktop tex-live wireshark R.Studio rust -y
 choco install forticlientvpn nvm nodejs imagemagick ghostscript  -y
 choco install kindle rufus -y
 
@@ -24,13 +24,28 @@ choco install kindle rufus -y
 
 # Shogi dokoro
 # https://shogidokoro2.stars.ne.jp/
-icacls "C:\Program Files (x86)\Shogidokoro" /grant "Everyone:(F)" /T
+icacls "C:\Program Files\Shogidokoro" /grant "Everyone:(F)" /T
 
 # =====
 # Uninstall Microsoft store
 Get-AppxPackage *Microsoft.WindowsStore* | Remove-AppxPackage
 
+$dns="1.1.1.1"
+$interfaces = Get-NetAdapter | Where-Object {$_.Status -eq "Up"}
+foreach ($i in $interfaces) {
+     Write-Information "Setting DNS for interface: $($i.Name)"
+     netsh interface ip set dns name="$($i.Name)" static $dns
+}
 
 # Rename hostname
 Rename-Computer -NewName "pc" -Restart
+
+# Allow to run script
+Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
+
+
+# Reformat partition
+Get-Disk
+Get-Partition -DriveLetter D
+Format-Volume -DriveLetter D -FileSystem NTFS -NewFileSystemLabel "Data" -Confirm:$false
 
