@@ -4,6 +4,11 @@ nslookup domain
 Resolve-DnsName domain
 ```
 
+### Reset:
+```powershell
+# Interface Wifi or Ethernet
+Set-DnsClientServerAddress -InterfaceAlias "WiFi" -ResetServerAddresses
+```
 
 ### Check DNS:
 ```powershell
