@@ -105,7 +105,3 @@ Destination: 10.10.0.1:53 (AWS)
 Sender: 10.10.0.1:53 (AWS)
 Destination: A:xxxxx
 ```
-
-**Remote Desktop**
-* Pro version only.
-* System -> Remote desktop

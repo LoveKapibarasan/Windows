@@ -11,7 +11,7 @@ choco search "$package"
 PS C:\WINDOWS\system32> Test-Path "C:\ProgramData\chocolatey\bin\choco.exe"                                             >>                                                                                                                      False                                                                                                                   PS C:\WINDOWS\system32>
 choco install git git-lfs intellijidea-community pycharm-community python dbeaver wireguard -y
 choco install openssh docker-desktop tex-live wireshark R.Studio rust -y
-choco install forticlientvpn nvm nodejs imagemagick ghostscript syncthing  -y
+choco install forticlientvpn nvm nodejs syncthing  -y
 choco install kindle rufus -y
 
 # Install Vim Extension(IntelliJ)
@@ -27,6 +27,9 @@ choco install kindle rufus -y
 # Shogi dokoro
 # https://shogidokoro2.stars.ne.jp/
 icacls "C:\Program Files\Shogidokoro" /grant "Everyone:(F)" /T
+
+# MikTex(Optimized for Windows)
+# https://miktex.org/download
 
 # =====
 # Uninstall Microsoft store
