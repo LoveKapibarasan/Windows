@@ -95,11 +95,18 @@ where program # which
 Resolve-Path $file_Path
 ```
 
-**Vim**
+**Vim, Nano**
 ```powershell
 notepad $file
 ```
 
+**here string**
+```powershell
+@"
+line1
+line2
+"@
+```
 
 ### Variable Expansion
 ```powershell

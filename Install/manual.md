@@ -31,3 +31,10 @@
   * XBox
   * Calcurator
   * Microsoft Store
+
+
+### Notes
+* `.exe` = `.msi` = `.msix`
+**`.msix`**
+* clean install, uninstall.
+* Microsoft Store
