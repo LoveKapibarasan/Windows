@@ -108,6 +108,15 @@ line2
 "@
 ```
 
+**curl**
+```powershell
+curl $url
+# Non-Formated output
+curl.exe $url
+```
+
+
+
 ### Variable Expansion
 ```powershell
 $name = "Alice"
